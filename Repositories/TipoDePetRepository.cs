@@ -82,7 +82,8 @@ namespace API_PetShop.Repositories
             cmd.CommandText = "DELETE FROM TipoDePet WHERE IdTipoDePet = @id ";
             cmd.Parameters.AddWithValue("@id", id);
 
-            cmd.ExecuteNonQuery();
+            SqlDataReader dados = cmd.ExecuteReader();
+
 
 
             conexao.Desconectar();
